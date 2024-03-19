@@ -1,0 +1,36 @@
+body,html{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+.bara{
+    height: 15%;
+    background-color: #d2d6dc;
+    width:100%;
+}
+.pagina{
+    height: 85%;
+    background-color:blue;
+    width:100%;
+}
+.logo{
+    height: 100%;
+    width:10%;
+
+}
+.titlu{
+    display:inline;
+}
+.buton{
+    float:right;
+    border:none;
+    background-color:#d2d6dc;
+}
+.buton:hover{
+    background-color: red;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
