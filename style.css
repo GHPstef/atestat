@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body,html{
     width:100%;
     height:100%;
@@ -8,19 +11,28 @@ body,html{
     height: 15%;
     background-color: #d2d6dc;
     width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
 }
 .pagina{
-    height: 85%;
+    height: 100%;
     background-color:blue;
     width:100%;
 }
 .logo{
-    height: 100%;
     width:10%;
-
+    margin-bottom: 10px;
+}
+h1{
+    margin-right:500px;
 }
 .titlu{
-    display:inline;
+    display:inline-block;
+    text-align:center;
+    width:50%;
+    align-items: center;
 }
 .buton{
     float:right;
