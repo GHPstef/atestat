@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programare Orientata Pe Obiecte</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bara">
-        <a href="index.html"><img class="logo" src="poo.png"></a>
+        <a href="index.html" style="margin-left:20px"><img class="logo" src="poo.png"></a>
         <button class="buton"><a href="pg4.html">Abstractizarea</a></button>
         <button class="buton"><a href="pg3.html">Încapsularea</a></button>
         <button class="buton"><a href="pg2.html">Polimorfismul</a></button>
-        <button class="buton"><a href="pg1.html">Moștenirea</a></button>
+        <button class="buton" style="margin-right:70px"><a href="pg1.html">Moștenirea</a></button>
     </div>
     <div class="pagina">
+        Programarea orientată pe obiect (Programare Orientată Obiectual) este unul din cei mai importanți pași făcuți în evoluția limbajelor de programare spre o mai puternică abstractizare în implementarea programelor. Ea a apărut din necesitatea exprimării problemei într-un mod mai simplu, pentru a putea fi înțeleasă de cât mai mulți programatori. Astfel unitățile care alcătuiesc un program se apropie mai mult de modul nostru de a gândi decât modul de lucru al calculatorului. Până la apariția programării orientate pe obiect, programele erau implementate în limbaje de programare procedurale (C, Pascal) sau în limbaje care nici măcar nu ofereau o modalitate de grupare a instrucțiunilor în unități logice (funcții, proceduri) cum este cazul limbajului de asamblare (asembler). Altfel spus o problemă preluată din natură trebuia fragmentată în repetate rânduri astfel încât să se identifice elementele distincte, implementabile într-un limbaj de programare. O mare problemă a programării procedurale era separarea datelor de unitățile care prelucrau datele (subrutinele), ceea ce făcea foarte dificilă extinderea și întreținerea unui program. Astfel s-a pus problema ca aceste două entități (date și subrutine) să fie grupate într-un anumit mod, astfel încât subrutinele să "știe" în permanență ce date prelucrează și, mai mult decât atât, ele să formeze un modul, adică o unitate care separă implementarea de interfață, ceea ce implică posibilitatea refolosirii codului. A apărut astfel conceptul de clasă. Clasa realizează, în speță, ceea ce am văzut mai înainte: grupează datele și unitățile de prelucrare a acestora într-un modul, unindu-le astfel într-o entitate mult mai naturală. Deși tehnica se numește "Programare Orientată Obiectual", conceptul de bază al ei este Clasa. Clasa, pe lângă faptul că abstractizează foarte mult analiza/sinteza problemei, are proprietatea de generalitate, ea desemnând o mulțime de obiecte care împart o serie de proprietăți.
+
+De exemplu: Clasa "floare" desemnează toate plantele care au flori, precum clasa "Fruct" desemnează toate obiectele pe care noi le identificam ca fiind fructe. Bineînțeles, în implementarea efectivă a programului nu se lucrează cu entități abstracte, precum clasele ci se lucrează cu obiecte, care sunt "instanțieri" ale claselor. Altfel spus, plecând de la exemplul de mai sus, dacă se construiește un program care să lucreze cu fructe, el nu va prelucra entitatea "fruct" ci va lucra cu entități concrete ale clasei "fruct", adică "măr", "pară", "portocală", etc.
+
+Apare însă următoarea problemă: "cum se trece de la o structură generală la una particulară, mai precis ce înseamnă efectiv procesul de instanțiere?". Instanțierea (trecerea de la clasă la obiect) înseamnă atribuirea unor proprietăți specifice clasei, astfel încât aceasta să indice un obiect anume, care se diferențiază de toate celelalte obiecte din clasă printr-o serie de atribute. Dacă vom considera ca "fruct_exotic" care desemnează clasa tuturor fructelor exotice ce conține proprietatea "culoare" atunci atribuind acesteia valoarea "galben" noi vom crea o nouă mulțime (clasa fructelor exotice care au culoarea galbenă) care este o subclasă a clasei "fruct_exotic", deci realizăm astfel o particularizare. Mai mult decât atât, dacă vom adăuga noi și noi atribute vom individualiza clasa astfel încât să ajungem la un caz concret, care este Obiectul.
+    </div>
+    <div class="jos">
         a
     </div>
 </body>
