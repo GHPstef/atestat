@@ -3,29 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programare Orientata Pe Obiecte</title>
+    <title>Polimorfismul</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bara">
-        <a href="index.html" style="margin-left:20px"><img class="logo" src="poo.png"></a>
+        <a href="index.html" style="margin-left:20px"><img class="logo" src="programare-orientata-pe-obiecte-high-resolution-logo-black-transparent (1).png"></a>
         <button class="buton"><a href="pg4.html">Abstractizarea</a></button>
         <button class="buton"><a href="pg3.html">Încapsularea</a></button>
         <button class="buton"><a href="pg2.html">Polimorfismul</a></button>
         <button class="buton" style="margin-right:70px"><a href="pg1.html">Moștenirea</a></button>
     </div>
-    <div class="pagina">
-        Programarea orientată pe obiect (Programare Orientată Obiectual) este unul din cei mai importanți pași făcuți în evoluția limbajelor de programare spre o mai puternică abstractizare în implementarea programelor. Ea a apărut din necesitatea exprimării problemei într-un mod mai simplu, pentru a putea fi înțeleasă de cât mai mulți programatori. Astfel unitățile care alcătuiesc un program se apropie mai mult de modul nostru de a gândi decât modul de lucru al calculatorului. Până la apariția programării orientate pe obiect, programele erau implementate în limbaje de programare procedurale (C, Pascal) sau în limbaje care nici măcar nu ofereau o modalitate de grupare a instrucțiunilor în unități logice (funcții, proceduri) cum este cazul limbajului de asamblare (asembler). Altfel spus o problemă preluată din natură trebuia fragmentată în repetate rânduri astfel încât să se identifice elementele distincte, implementabile într-un limbaj de programare. O mare problemă a programării procedurale era separarea datelor de unitățile care prelucrau datele (subrutinele), ceea ce făcea foarte dificilă extinderea și întreținerea unui program. Astfel s-a pus problema ca aceste două entități (date și subrutine) să fie grupate într-un anumit mod, astfel încât subrutinele să "știe" în permanență ce date prelucrează și, mai mult decât atât, ele să formeze un modul, adică o unitate care separă implementarea de interfață, ceea ce implică posibilitatea refolosirii codului. A apărut astfel conceptul de clasă. Clasa realizează, în speță, ceea ce am văzut mai înainte: grupează datele și unitățile de prelucrare a acestora într-un modul, unindu-le astfel într-o entitate mult mai naturală. Deși tehnica se numește "Programare Orientată Obiectual", conceptul de bază al ei este Clasa. Clasa, pe lângă faptul că abstractizează foarte mult analiza/sinteza problemei, are proprietatea de generalitate, ea desemnând o mulțime de obiecte care împart o serie de proprietăți.
-
-De exemplu: Clasa "floare" desemnează toate plantele care au flori, precum clasa "Fruct" desemnează toate obiectele pe care noi le identificam ca fiind fructe. Bineînțeles, în implementarea efectivă a programului nu se lucrează cu entități abstracte, precum clasele ci se lucrează cu obiecte, care sunt "instanțieri" ale claselor. Altfel spus, plecând de la exemplul de mai sus, dacă se construiește un program care să lucreze cu fructe, el nu va prelucra entitatea "fruct" ci va lucra cu entități concrete ale clasei "fruct", adică "măr", "pară", "portocală", etc.
-
-Apare însă următoarea problemă: "cum se trece de la o structură generală la una particulară, mai precis ce înseamnă efectiv procesul de instanțiere?". Instanțierea (trecerea de la clasă la obiect) înseamnă atribuirea unor proprietăți specifice clasei, astfel încât aceasta să indice un obiect anume, care se diferențiază de toate celelalte obiecte din clasă printr-o serie de atribute. Dacă vom considera ca "fruct_exotic" care desemnează clasa tuturor fructelor exotice ce conține proprietatea "culoare" atunci atribuind acesteia valoarea "galben" noi vom crea o nouă mulțime (clasa fructelor exotice care au culoarea galbenă) care este o subclasă a clasei "fruct_exotic", deci realizăm astfel o particularizare. Mai mult decât atât, dacă vom adăuga noi și noi atribute vom individualiza clasa astfel încât să ajungem la un caz concret, care este Obiectul.
+    <div class="sus">
+        <div style="height:30%;margin-right:30%;padding-top:10%;" class="nr1">
+            <h1 style="width:20%;
+                padding-left:50%;
+                margin-top:6%;
+                font-size:50px;
+                ">Polimorfismul</h1>
+        </div>
+        <div class="nr2" style="height: 80%">
+            <img style="width:100%; height: 100%;object-fit:contain;"src="poli.png">
+        </div>
     </div>
     <div class="jos">
-        a
+        <p>
+            Polimorfismul permite clasei de bază să definească funcții care vor fi comune pentru toate clasele derivate, cu mențiunea că acele clase derivate pot implementa în felul lor respectivele funcții. Aceasta înseamnă că obiectele de un anumit tip se pot vizualiza ca obiecte de tip de bază. Însă, comportamentul polimorfic al apelului permite ca obiectul derivat să-și exprime diversitatea.Este important de știut că clasa de bază și cele derivate formează o ierarhie care trece de la o generalizare mai restrânsă la una mai largă. În acest caz, clasa de bază are tot ceea ce pot utiliza clasele derivate. Astfel, clasele derivate au posibilitatea de a implementa independent funcții.
+        </p>
+        <p>In C++ polimorfismul poate fi implementat prin:</p>
+        <ul >
+            <li>
+                supraîncărcarea funcțiilor
+            </li>
+            <li>
+                supraîncărcarea operatorilor
+            </li>
+            <li>
+                suprascrierea funcțiilor
+            </li>
+            <li>
+                funcții virtuale
+            </li>
+        </ul>
+        <h2> Suprascrierea funcțiilor</h2>
+        <p>Suprascrierea funcțiilor (overriding) se referă la situația ca într-o ierarhie de clase să avem metode cu același nume, dar cu efecte diferite. Considerăm clasele Animal și Caine.
+        </p>
+        <pre data-lang="text/x-c++src"><span>            #include&lt;iostream&gt;</span>
+
+            <span >using</span> <span>namespace</span> <span>std</span>;
+            
+            <span>class</span> <span>Animal</span>{
+                <span>public</span>:
+                    <span>void</span> <span >vorbeste</span>()
+                    {
+                        <span>cout</span> <span>&lt;&lt;</span> <span>"Animalul vorbeste."</span> <span>&lt;&lt;</span> <span>endl</span>;
+                    }
+            };
+            
+            <span>class</span> <span >Caine</span>: <span>public</span> <span>Animal</span>{
+                <span>public</span>:
+                    <span>void</span> <span >vorbeste</span>()
+                    {
+                        <span >cout</span> <span >&lt;&lt;</span> <span>"Cainele latra."</span> <span>&lt;&lt;</span> <span>endl</span>;
+                    }
+            };
+            
+            <span>int</span> <span >main</span>(){
+                <span >Caine</span> <span >C</span>;
+                <span >Animal</span> <span >A</span>;
+                <span >C</span>.<span >vorbeste</span>();
+                <span >A</span>.<span >vorbeste</span>();
+                <span >C</span>.<span >Animal</span>::<span >vorbeste</span>();
+                <span>// A.Caine::vorbeste(); // imposibil</span>
+            }</pre>
+        <h2>Supraincarcarea operatorilor</h2>
+        <p>Putem supraîncărca aproape toți operatorii C++ predefiniți. În acest mod putem folosi operatorii și pentru tipurile definite de noi, nu doar pentru cele predefinite.        </p>
+        <p>Operatorii sunt funcții cu un nume special: cuvântul rezervat operator, urmat de simbolul operatorului pe care îl definim. La fel ca orice altă funcție, și operatorii au tip al rezultatului și listă de parametri.
+            <pre data-lang="text/x-c++src"><span>                #include &lt;iostream&gt;</span>
+
+                <span>using</span> <span>namespace</span> <span>std</span>;
+                
+                <span>class</span> <span>Fractie</span>{
+                    <span>private</span>:
+                        <span>int</span> <span>numarator</span>, <span>numitor</span>;
+                    <span>public</span>:
+                        <span>void</span> <span>afiseaza</span>() <span>/// metodă pentru afișarea fractiei</span>
+                        {
+                            <span>cout</span> <span>&lt;&lt;</span> <span>numarator</span> <span>&lt;&lt;</span> <span>"/"</span> <span>&lt;&lt;</span> <span>numitor</span> <span>&lt;&lt;</span> <span>endl</span>;
+                        }
+                        <span>Fractie</span>(<span>int</span> <span>a</span> , <span>int</span> <span>b</span>) <span>/// constructor</span>
+                        {
+                            <span>if</span>(<span>b</span> <span>&lt;</span> <span>0</span>)
+                                <span>a</span> <span>=</span> <span>-</span><span>a</span>, <span>b</span> <span>=</span> <span>-</span><span>b</span>;
+                            <span>numarator</span> <span>=</span> <span>a</span>, <span>numitor</span> <span>=</span> <span>b</span>;
+                        }
+                        <span>Fractie</span> <span>&amp;</span> <span>creste</span>()
+                        {
+                            <span>numarator</span> <span>+=</span> <span>numitor</span>;
+                            <span>return</span> <span>*</span><span>this</span>;
+                        }
+                        <span>Fractie</span> <span>&amp;</span> <span>creste</span>(<span>int</span> <span>n</span>)
+                        {
+                            <span>numarator</span> <span>+=</span> <span>n</span> <span>*</span> <span>numitor</span>;
+                            <span>return</span> <span>*</span><span>this</span>;
+                        }
+                };
+                
+                <span>int</span> <span>main</span>(){
+                    <span>Fractie</span> <span>x</span>(<span>1</span> , <span>4</span>);
+                    <span>x</span>.<span>afiseaza</span>();
+                    <span>x</span>.<span>creste</span>();
+                    <span>x</span>.<span>afiseaza</span>();
+                    <span>x</span>.<span>creste</span>(<span>3</span>);
+                    <span>x</span>.<span>afiseaza</span>();
+                    <span>return</span> <span>0</span>;
+                }</pre>
+        </p>
     </div>
 </body>
 </html>

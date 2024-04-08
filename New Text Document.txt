@@ -1,0 +1,40 @@
+Programarea Orientata pe Obiecte (POO) – este o paradigma de programare care foloseste concepte abstracte (sub forma de clase si obiecte) pentru a crea modele bazate pe elemente din lumea reala. O aplicatie construita pe programare orientata pe obiecte foloseste mai multe obiecte care comunica prin mesaje specifice pentru a rezolva diverse servicii (ale aplicatiei) solicitate. Aceste obiecte sunt capabile sa trimita mesaje (date), sa primeasca mesaje (date) si sa proceseze date. Scopul programarii orientate pe obiecte este de a incerca sa creasca flexibilitatea si mentenabilitatea programelor. Deoarece programele create folosind o un limbaj orientat pe obiecte sunt modulare, ele pot fi mai usor de dezvoltat si mai usor de inteles dupa dezvoltare.Scopul programarii orientate pe obiecte este cel de a rezolva dificultatile legate de programarea procedurala. In programarea orientata pe obiecte, principalele module dintr-un program sunt clase, mai degraba decat proceduri. Programarea orientata pe obiecte ne permite sa ne cream clase si obiecte care modeleaza elementele din lumea reala. 
+
+
+
+Mostenirea(pg1):Moștenirea implică identificarea proprietăților comune ale diferitelor clase și facilitează foarte mult programarea, deoarece pierdem nevoia de a scrie aceleași atribute de mai multe ori. Acest proces permite unei clase să moștenească caracteristicile altei clase.Acesta este un concept prin care se poate defini ierarhia de clasă, ceea ce înseamnă că obiectele sunt definite doar de caracteristici unice. Astfel se definește clar în ce mod se poate realiza un nou obiect. Clasa derivată este o subclasă (urmaș), iar cea mai generală este o supraclasa (strămoș). În acest mod se creează o linie ierarhică de moștenire.
+
+Polimorfism(pg2):Polimorfismul permite clasei de bază să definească funcții care vor fi comune pentru toate clasele derivate, cu mențiunea că acele clase derivate pot implementa în felul lor respectivele funcții. Aceasta înseamnă că obiectele de un anumit tip se pot vizualiza ca obiecte de tip de bază. Însă, comportamentul polimorfic al apelului permite ca obiectul derivat să-și exprime diversitatea.Este important de știut că clasa de bază și cele derivate formează o ierarhie care trece de la o generalizare mai restrânsă la una mai largă. În acest caz, clasa de bază are tot ceea ce pot utiliza clasele derivate. Astfel, clasele derivate au posibilitatea de a implementa independent funcții.
+
+Abstractizarea (pg4):Abstracția presupune simplificarea caracteristicilor unei clase pentru a sublinia proprietățile importante și a le ignora pe cele mai puțin importante (definite de la caz la caz).La abstracție se neglijează anumite detalii și se ține seama, în primul rând, de caracteristicile comune ale unei clase, în funcție de nevoia programului dat. În acest mod se aleg proprietățile prin care clasa definește un anumit obiect.
+
+
+Incapsularea (pg3):Încapsularea sau închiderea reprezintă unul dintre conceptele de bază ale orientării pe obiecte. Este vorba despre un proces în care informația despre o clasă este protejată de accesul direct. În acest caz, singura modalitate de acces este prin metodele definite. În acest mod se ascund detaliile, iar utilizatorul știe doar ce poate face cu un anumit obiect.Asta înseamnă că, de exemplu, putem tipări ceva cu un singur clic pe buton, dar fără să știm exact ce se întâmplă când are loc acest lucru. Acest mod de programare se numește „cutia neagră”, deoarece știm cum să activăm ceva, dar nu știm în detaliu cum se desfășoară procesul. În acest mod se reduce șansa de a ajunge la o eroare, deoarece pur și simplu nu există o abordare mai detaliată. Acest proces se realizează împărțind membrii clasei în publici și privați.Membrii publici se folosesc în orice parte a programului, în timp ce membrii privați pot fi accesați doar în cadrul unei clase definite. Astfel, membrii clasei private se schimbă într-un mod clar definit. În acest mod se creează o anumită protecție care protejează acești membri. Totuși, trebuie știut că indiferent de protecție, toți membrii din cadrul corpului clasei sunt accesibili reciproc.
+
+
+
+
+III. Beneficiile Programarii Orientate pe Obiecte(index)
+1. Modularitatea: codul sursa pentru o clasa poate fi scris si mentinut independent de codul sursa pentru alte clase. Odata creat, un obiect poate fi usor transferat in interiorul sistemului.
+
+2. Securitate ridicata la nivel de cod: Interactionand doar cu metodele obiectului, detaliile implementarii interne raman ascunse de lumea exterioara.
+
+3. Reutilizarea codului: daca o clasa exista deja, puteti utiliza in programul dvs. obiecte din acea clasa. Acest lucru permite programatorilor sa implementeze / testa / depana obiecte complexe, specifice pentru sarcini, pe care apoi le puteti folosi in propriul cod.
+
+4. Debugging mai usor: Daca un anumit obiect se dovedeste a fi o problema, il puteti elimina din program si puteti adauga/conecta, ca inlocuitor, un obiect diferit. Acest lucru este similar cu rezolvarea problemelor mecanice in lumea reala. Daca un surub se rupe, il inlocuiti pe el, nu intreaga masina.
+https://ramonnastase.ro/wp-content/uploads/2019/08/elementele-programarii-orientate-pe-obiecte.png
+
+
+
+Bibliografie:
+https://ramonnastase.ro/blog/programare-orientata-pe-obiecte-poo/ (index)
+https://www.google.com/url?sa=i&url=http%3A%2F%2Focw.cs.pub.ro%2Fcourses%2Fpoo-ca-cd%2Flaboratoare%2Fclase-abstracte-interfete&psig=AOvVaw30lu8msy5RjFuvbF1TBJWh&ust=1712259259854000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjK5fvkpoUDFQAAAAAdAAAAABAZ (pg4,abstractizare)
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQEd7Zvj4WbWYVLin9AVtETq6ZrzQh5Up9mnbshEiTg&s (pg1,mostenire)
+https://miro.medium.com/v2/resize:fit:1400/1*fBuojCESyN8ib8hJIrKWQw.jpeg(pg3,incapsulare)
+https://media.geeksforgeeks.org/wp-content/uploads/20221108162620/Polymorphism.png(pg2,polimorfism)
+
+
+
+
+https://www.pbinfo.ro/articole/5549/informatica-clasa-a-xi-a
+

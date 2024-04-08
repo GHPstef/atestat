@@ -3,29 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programare Orientata Pe Obiecte</title>
+    <title>Încapsularea</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bara">
-        <a href="index.html" style="margin-left:20px"><img class="logo" src="poo.png"></a>
+        <a href="index.html" style="margin-left:20px"><img class="logo" src="programare-orientata-pe-obiecte-high-resolution-logo-black-transparent (1).png"></a>
         <button class="buton"><a href="pg4.html">Abstractizarea</a></button>
         <button class="buton"><a href="pg3.html">Încapsularea</a></button>
         <button class="buton"><a href="pg2.html">Polimorfismul</a></button>
         <button class="buton" style="margin-right:70px"><a href="pg1.html">Moștenirea</a></button>
     </div>
-    <div class="pagina">
-        Programarea orientată pe obiect (Programare Orientată Obiectual) este unul din cei mai importanți pași făcuți în evoluția limbajelor de programare spre o mai puternică abstractizare în implementarea programelor. Ea a apărut din necesitatea exprimării problemei într-un mod mai simplu, pentru a putea fi înțeleasă de cât mai mulți programatori. Astfel unitățile care alcătuiesc un program se apropie mai mult de modul nostru de a gândi decât modul de lucru al calculatorului. Până la apariția programării orientate pe obiect, programele erau implementate în limbaje de programare procedurale (C, Pascal) sau în limbaje care nici măcar nu ofereau o modalitate de grupare a instrucțiunilor în unități logice (funcții, proceduri) cum este cazul limbajului de asamblare (asembler). Altfel spus o problemă preluată din natură trebuia fragmentată în repetate rânduri astfel încât să se identifice elementele distincte, implementabile într-un limbaj de programare. O mare problemă a programării procedurale era separarea datelor de unitățile care prelucrau datele (subrutinele), ceea ce făcea foarte dificilă extinderea și întreținerea unui program. Astfel s-a pus problema ca aceste două entități (date și subrutine) să fie grupate într-un anumit mod, astfel încât subrutinele să "știe" în permanență ce date prelucrează și, mai mult decât atât, ele să formeze un modul, adică o unitate care separă implementarea de interfață, ceea ce implică posibilitatea refolosirii codului. A apărut astfel conceptul de clasă. Clasa realizează, în speță, ceea ce am văzut mai înainte: grupează datele și unitățile de prelucrare a acestora într-un modul, unindu-le astfel într-o entitate mult mai naturală. Deși tehnica se numește "Programare Orientată Obiectual", conceptul de bază al ei este Clasa. Clasa, pe lângă faptul că abstractizează foarte mult analiza/sinteza problemei, are proprietatea de generalitate, ea desemnând o mulțime de obiecte care împart o serie de proprietăți.
-
-De exemplu: Clasa "floare" desemnează toate plantele care au flori, precum clasa "Fruct" desemnează toate obiectele pe care noi le identificam ca fiind fructe. Bineînțeles, în implementarea efectivă a programului nu se lucrează cu entități abstracte, precum clasele ci se lucrează cu obiecte, care sunt "instanțieri" ale claselor. Altfel spus, plecând de la exemplul de mai sus, dacă se construiește un program care să lucreze cu fructe, el nu va prelucra entitatea "fruct" ci va lucra cu entități concrete ale clasei "fruct", adică "măr", "pară", "portocală", etc.
-
-Apare însă următoarea problemă: "cum se trece de la o structură generală la una particulară, mai precis ce înseamnă efectiv procesul de instanțiere?". Instanțierea (trecerea de la clasă la obiect) înseamnă atribuirea unor proprietăți specifice clasei, astfel încât aceasta să indice un obiect anume, care se diferențiază de toate celelalte obiecte din clasă printr-o serie de atribute. Dacă vom considera ca "fruct_exotic" care desemnează clasa tuturor fructelor exotice ce conține proprietatea "culoare" atunci atribuind acesteia valoarea "galben" noi vom crea o nouă mulțime (clasa fructelor exotice care au culoarea galbenă) care este o subclasă a clasei "fruct_exotic", deci realizăm astfel o particularizare. Mai mult decât atât, dacă vom adăuga noi și noi atribute vom individualiza clasa astfel încât să ajungem la un caz concret, care este Obiectul.
+    <div class="sus">
+        <div style="height:30%;margin-right:30%;padding-top:10%;" class="nr1">
+            <h1 style="width:20%;
+                padding-left:50%;
+                margin-top:6%;
+                font-size:50px;
+                ">Încapsularea</h1>
+        </div>
+        <div class="nr2" style="height: 80%">
+            <img style="width:90%; height: 90%;object-fit:contain;"src="incjpg.jpg">
+        </div>
     </div>
     <div class="jos">
-        a
+        <p>Încapsularea sau închiderea reprezintă unul dintre conceptele de bază ale orientării pe obiecte. Este vorba despre un proces în care informația despre o clasă este protejată de accesul direct. În acest caz, singura modalitate de acces este prin metodele definite. În acest mod se ascund detaliile, iar utilizatorul știe doar ce poate face cu un anumit obiect.Asta înseamnă că, de exemplu, putem tipări ceva cu un singur clic pe buton, dar fără să știm exact ce se întâmplă când are loc acest lucru. Acest mod de programare se numește „cutia neagră”, deoarece știm cum să activăm ceva, dar nu știm în detaliu cum se desfășoară procesul. În acest mod se reduce șansa de a ajunge la o eroare, deoarece pur și simplu nu există o abordare mai detaliată. Acest proces se realizează împărțind membrii clasei în publici și privați.Membrii publici se folosesc în orice parte a programului, în timp ce membrii privați pot fi accesați doar în cadrul unei clase definite. Astfel, membrii clasei private se schimbă într-un mod clar definit. În acest mod se creează o anumită protecție care protejează acești membri. Totuși, trebuie știut că indiferent de protecție, toți membrii din cadrul corpului clasei sunt accesibili reciproc.</p>
+        <h3>Caracteristicile încapsulării:</h3>
+        <ol>
+            <li>Nu putem accesa nicio funcție din clasă direct. Avem nevoie de un obiect pentru a accesa acea funcție care utilizează variabilele membre ale acelei clase.</li>
+            <li>Funcția pe care o facem în interiorul clasei trebuie să folosească numai variabile membre, doar atunci se numește încapsulare.</li>
+            <li>Dacă nu facem o funcție în interiorul clasei care utilizează variabila membru a clasei, atunci nu o numim încapsulare.</li>
+            <li>Încapsularea îmbunătățește lizibilitatea, mentenabilitatea și securitatea prin gruparea datelor și a metodelor împreună.</li>
+            <li>Ajută la controlul modificării datelor membrilor noștri.</li>
+
+        </ol>
+        <h3> Rolul specificatorilor de acces în încapsulare </h3>
+        <p>Specificatorii de acces facilitează ascunderea datelor în programele C++ prin restricţionarea accesului la funcţiile membrilor clasei şi la membrii datelor. Există trei tipuri de specificatori de acces în C++:</p>
+        <ul>
+            <li>Privat: Specificatorul de acces privat înseamnă că funcția membru sau membrul de date poate fi accesat numai de alte funcții membre din aceeași clasă.</li>
+            <li>Protejat: un specificator de acces protejat înseamnă că funcția membru sau membrul de date poate fi accesat de alte funcții membre din aceeași clasă sau de clase derivate.</li>
+            <li>Public: specificatorul de acces public înseamnă că funcția membru sau membrul de date poate fi accesat prin orice cod.</li>
+        </ul>
+        <p>Exemplu:</p>
+        <div>
+            <div>
+            <table>
+            <tbody>
+            <tr>
+            <td>
+            <div>
+            <div><code>#include &lt;iostream&gt;</code></div>
+            <div><code >using</code> <code >namespace</code> <code >std;</code></div>
+            <div>&nbsp;</div>
+            <div><code >class</code> <code >Incapsulare {</code></div>
+            <div><code >private</code><code >:</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Date ascunse de restul lumii</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code  bold">int</code> <code >x;</code></div>
+            <div>&nbsp;</div>
+            <div><code >public</code><code >:</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Functie care atribuie o valoare</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// variabilei x</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code >void</code> <code >set(</code><code >int</code> <code >a) { x = a; }</code></div>
+            <div>&nbsp;</div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Functie care returneaza valoarea</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// variabilei x</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code >int</code> <code>get() { </code><code >return</code> <code >x; }</code></div>
+            <div><code>};</code></div>
+            <div>&nbsp;</div>
+            <div><code>int</code> <code>main()</code></div>
+            <div><code >{</code></div>
+            <div><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Incapsulare obj;</code></div>
+            <div><code >&nbsp;&nbsp;&nbsp;&nbsp;</code><code>obj.set(5);</code></div>
+            <div><code >&nbsp;&nbsp;&nbsp;&nbsp;</code><code>cout &lt;&lt; obj.get();</code></div>
+            <div><code >&nbsp;&nbsp;&nbsp;&nbsp;</code><code >return</code> <code >0;</code></div>
+            <div><code>}</code></div>
+            </div>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </div></div>
     </div>
 </body>
 </html>

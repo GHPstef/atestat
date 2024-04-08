@@ -3,29 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programare Orientata Pe Obiecte</title>
+    <title>Mostenirea</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bara">
-        <a href="index.html" style="margin-left:20px"><img class="logo" src="poo.png"></a>
+        <a href="index.html" style="margin-left:20px"><img class="logo" src="programare-orientata-pe-obiecte-high-resolution-logo-black-transparent (1).png"></a>
         <button class="buton"><a href="pg4.html">Abstractizarea</a></button>
         <button class="buton"><a href="pg3.html">Încapsularea</a></button>
         <button class="buton"><a href="pg2.html">Polimorfismul</a></button>
         <button class="buton" style="margin-right:70px"><a href="pg1.html">Moștenirea</a></button>
     </div>
-    <div class="pagina">
-        Programarea orientată pe obiect (Programare Orientată Obiectual) este unul din cei mai importanți pași făcuți în evoluția limbajelor de programare spre o mai puternică abstractizare în implementarea programelor. Ea a apărut din necesitatea exprimării problemei într-un mod mai simplu, pentru a putea fi înțeleasă de cât mai mulți programatori. Astfel unitățile care alcătuiesc un program se apropie mai mult de modul nostru de a gândi decât modul de lucru al calculatorului. Până la apariția programării orientate pe obiect, programele erau implementate în limbaje de programare procedurale (C, Pascal) sau în limbaje care nici măcar nu ofereau o modalitate de grupare a instrucțiunilor în unități logice (funcții, proceduri) cum este cazul limbajului de asamblare (asembler). Altfel spus o problemă preluată din natură trebuia fragmentată în repetate rânduri astfel încât să se identifice elementele distincte, implementabile într-un limbaj de programare. O mare problemă a programării procedurale era separarea datelor de unitățile care prelucrau datele (subrutinele), ceea ce făcea foarte dificilă extinderea și întreținerea unui program. Astfel s-a pus problema ca aceste două entități (date și subrutine) să fie grupate într-un anumit mod, astfel încât subrutinele să "știe" în permanență ce date prelucrează și, mai mult decât atât, ele să formeze un modul, adică o unitate care separă implementarea de interfață, ceea ce implică posibilitatea refolosirii codului. A apărut astfel conceptul de clasă. Clasa realizează, în speță, ceea ce am văzut mai înainte: grupează datele și unitățile de prelucrare a acestora într-un modul, unindu-le astfel într-o entitate mult mai naturală. Deși tehnica se numește "Programare Orientată Obiectual", conceptul de bază al ei este Clasa. Clasa, pe lângă faptul că abstractizează foarte mult analiza/sinteza problemei, are proprietatea de generalitate, ea desemnând o mulțime de obiecte care împart o serie de proprietăți.
-
-De exemplu: Clasa "floare" desemnează toate plantele care au flori, precum clasa "Fruct" desemnează toate obiectele pe care noi le identificam ca fiind fructe. Bineînțeles, în implementarea efectivă a programului nu se lucrează cu entități abstracte, precum clasele ci se lucrează cu obiecte, care sunt "instanțieri" ale claselor. Altfel spus, plecând de la exemplul de mai sus, dacă se construiește un program care să lucreze cu fructe, el nu va prelucra entitatea "fruct" ci va lucra cu entități concrete ale clasei "fruct", adică "măr", "pară", "portocală", etc.
-
-Apare însă următoarea problemă: "cum se trece de la o structură generală la una particulară, mai precis ce înseamnă efectiv procesul de instanțiere?". Instanțierea (trecerea de la clasă la obiect) înseamnă atribuirea unor proprietăți specifice clasei, astfel încât aceasta să indice un obiect anume, care se diferențiază de toate celelalte obiecte din clasă printr-o serie de atribute. Dacă vom considera ca "fruct_exotic" care desemnează clasa tuturor fructelor exotice ce conține proprietatea "culoare" atunci atribuind acesteia valoarea "galben" noi vom crea o nouă mulțime (clasa fructelor exotice care au culoarea galbenă) care este o subclasă a clasei "fruct_exotic", deci realizăm astfel o particularizare. Mai mult decât atât, dacă vom adăuga noi și noi atribute vom individualiza clasa astfel încât să ajungem la un caz concret, care este Obiectul.
+    <div class="sus">
+        <div style="height:30%;margin-right:30%;padding-top:10%;" class="nr1">
+            <h1 style="width:20%;
+                padding-left:50%;
+                margin-top:6%;
+                font-size:50px;
+                ">Mostenirea</h1>
+        </div>
+        <div class="nr2" style="height: 80%">
+            <img style="width:100%; height: 100%;object-fit:contain;"src="mostenire.jpg">
+        </div>
     </div>
     <div class="jos">
-        a
+        <p>Moștenirea implică identificarea proprietăților comune ale diferitelor clase și facilitează foarte mult programarea, deoarece pierdem nevoia de a scrie aceleași atribute de mai multe ori. Acest proces permite unei clase să moștenească caracteristicile altei clase.Acesta este un concept prin care se poate defini ierarhia de clasă, ceea ce înseamnă că obiectele sunt definite doar de caracteristici unice. Astfel se definește clar în ce mod se poate realiza un nou obiect. Clasa derivată este o subclasă (urmaș), iar cea mai generală este o supraclasa (strămoș). În acest mod se creează o linie ierarhică de moștenire.</p>
+        <p>Exemplu:</p>
+        <div style="border:1px solid black;display:inline-block; margin-left:400px;">
+        <pre><code><cite>// clase derivate</cite>
+            <dfn>#include &lt;iostream&gt;</dfn>
+            <var>using</var> <var>namespace</var> std;
+            
+            <var>class</var> Poligon {
+              <var>protected</var>:
+                <var>int</var> latime, inaltime;
+              <var>public</var>:
+                <var>void</var> seteaza_valori (<var>int</var> a, <var>int</var> b)
+                  { latime=a; inaltime=b;}
+             };
+            
+            <var>class</var> Dreptunghi: <var>public</var> Poligon {
+              <var>public</var>:
+                <var>int</var> aria ()
+                  { <var>return</var> latime * inaltime; }
+             };
+            
+            <var>class</var> Triunghi: <var>public</var> Poligon {
+              <var>public</var>:
+                <var>int</var> aria ()
+                  { <var>return</var> latime * inaltime / 2; }
+              };
+              
+            <var>int</var> main () {
+              Dreptunhgi drept;
+              Triunghi trg;
+              drept.seteaza_valori (4,5);
+              trg.seteaza_valori (4,5);
+              cout &lt;&lt; drept.aria() &lt;&lt; <kbd>'\n'</kbd>;
+              cout &lt;&lt; trg.aria() &lt;&lt; <kbd>'\n'</kbd>;
+              <var>return</var> 0;
+            }</code></pre>
+        </div>
+        <img style="padding-bottom:150px;margin-left:200px;" src="inheritance.png">
     </div>
+    <section>
+        <h3>Ce se moștenește de la clasa de bază?</h3>
+        <p>În principiu, o clasă derivată moștenește toți membrii clasei de bază, exceptând:</p><br>
+        <br>
+        <ul>
+        <li>constructorii și destructorii</li>
+        <li>operatorul de atribuire a membrilor (operatorul=)</li>
+        <li>prietenii</li>
+        <li>membrii privați</li>
+        </ul>
+        <br>
+        <p>Deși contructorii și destructorii clasei de bază nu sunt moșteniți drept constructori și destructori ai clasei derivate, pot fi încă apelați de către constructorul clasei derivate. Numai dacă nu este altfel precizat, constructorii clasei derivate apelează constructorii impliciți ai claselor de bază (de exemplu, constructorul fără parametri), care trebuie să existe.</p><br>
+        <br>
+        <p>Apelarea altui constructor al clasei de bază este posibilă, prin folosirea aceleiași sintaxe ca la inițializarea variabilelor membru din lista de inițializare:</p><br>
+        <br>
+        <code>
+        nume_constructor_derivat (parameteri) : nume_constructor_bază (parameteri) {...}<br>
+        </code>
+        <br>
+        De exemplu: <br>
+        <br>
+        <div><table><tbody><tr><td class><pre><code></code></pre></td>
+        <td><pre><code><cite>// constructori si clase derivate</cite>
+        <dfn>#include &lt;iostream&gt;</dfn>
+        <var>using</var> <var>namespace</var> std;
+        
+        <var>class</var> Mama {
+          <var>public</var>:
+            Mama ()
+              { cout &lt;&lt; <kbd>"Mama: fara parametri\n"</kbd>; }
+            Mama (<var>int</var> a)
+              { cout &lt;&lt; <kbd>"Mama: parametru de tip int\n"</kbd>; }
+        };
+        
+        <var>class</var> Fiica : <var>public</var> Mama {
+          <var>public</var>:
+            Fiica (<var>int</var> a)
+              { cout &lt;&lt; <kbd>"Fiica: parametru de tip int\n\n"</kbd>; }
+        };
+        
+        <var>class</var> Fiu : <var>public</var> Mama {
+          <var>public</var>:
+            Fiu (<var>int</var> a) : Mama (a)
+              { cout &lt;&lt; <kbd>"Fiu: parametru de tip int\n\n"</kbd>; }
+        };
+        
+        <var>int</var> main () {
+          Fiica kelly(0);
+          Fiu bud(0);
+          
+          <var>return</var> 0;
+        }</code></pre></td>
+        <td><pre><samp>Mama: fara parameteri
+        Fiica: parametru de tip int
+        
+        Mama: parametru de tip int
+        Fiu: parameteru de tip int</samp></pre></td></tr></tbody></table><div><a><div><a ><span></span></a></div></a></div></div>
+        <br>
+        Să observăm diferența între varianta cu apelarea constructorului clasei <code>Mama</code> la crearea unui nou obiect <code>Fiica</code> și varianta cu un obiect <code>Fiu</code>. Se datorează declarațiilor diferite de constructor pentru <code>Fiica</code> și <code>Fiu</code>:<br>
+        <br>
+        <div><table><tbody><tr><td><pre><code>1<br>2<br></code></pre></td>
+        <td><pre><code>Fiica (<var>int</var> a) <cite>// nimic specificat: apel al constructorului implicit</cite>
+Fiu (<var>int</var> a) : Mama (a)  <cite>// constructor specificat: apelul acelui constructor </cite></code></pre></td>
+        </tr></tbody></table></div>
+        </section>
 </body>
 </html>
